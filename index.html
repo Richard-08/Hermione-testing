@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test</title>
+  </head>
+
+  <style>
+    .toggle-btn,
+    .toggle-btn-2,
+    .toggle-btn-3 {
+      background-color: aqua;
+      border: none;
+      padding: 5px 10px;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .text,
+    .text-2,
+    .text-3 {
+      display: none;
+      font-size: 20px;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .text.show,
+    .text-2.show,
+    .text-3.show {
+      display: block;
+    }
+  </style>
+
+  <body>
+    <button class="toggle-btn button">Press me!</button>
+    <p class="text">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit animi, ex
+      aliquid velit doloremque nam possimus enim cupiditate dicta? Ullam
+      deleniti facilis sunt recusandae nesciunt voluptatibus unde omnis modi!
+      Architecto?
+    </p>
+
+    <button class="toggle-btn-2 button">Press me!</button>
+    <p class="text-2">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit animi, ex
+      aliquid velit doloremque nam possimus enim cupiditate dicta? Ullam
+      deleniti facilis sunt recusandae nesciunt voluptatibus unde omnis modi!
+      Architecto?
+    </p>
+
+    <button class="toggle-btn-3 button">Press me!</button>
+    <p class="text-3">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit animi, ex
+      aliquid velit doloremque nam possimus enim cupiditate dicta? Ullam
+      deleniti facilis sunt recusandae nesciunt voluptatibus unde omnis modi!
+      Architecto?
+    </p>
+  </body>
+
+  <script>
+    const btn = document.querySelector(".toggle-btn");
+    const text = document.querySelector(".text");
+
+    btn.addEventListener("click", () => {
+      text.classList.toggle("show");
+    });
+
+    const btn2 = document.querySelector(".toggle-btn-2");
+    const text2 = document.querySelector(".text-2");
+
+    btn2.addEventListener("click", () => {
+      text2.classList.toggle("show");
+    });
+
+    const btn3 = document.querySelector(".toggle-btn-3");
+    const text3 = document.querySelector(".text-3");
+
+    btn3.addEventListener("click", () => {
+      text3.classList.toggle("show");
+    });
+  </script>
+</html>
